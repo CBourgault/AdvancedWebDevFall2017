@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>TODO write content</div>
+
+        <script type="text/javascript">
+                      
+            let myRequest = 'http://localhost:3000/todo'
+            
+            fetch(myRequest)
+            .then(function(response) {              
+                  return response.json()               
+            })
+            .then(function(todo) { 
+                let htmlStr = ''
+                for (let index in todo) {
+                   htmlStr += `<p>${index} is ${todo[index].id} ID and ${todo[index].title} Title.</p>`
+               } 
+                console.log(htmlStr)
+                document.body.innerHTML += htmlStr
+            })
+           
+        </script>
+        
+    </body>
+</html>
