@@ -1,8 +1,27 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: red;
+  background-color: honeydew;
+  width: 980px;
 }
 
 a {
   color: #00B7FF;
 }
+
+p {
+    color: blue;
+    text-align: center;
+}
+
+input{
+    color: blueviolet;
+    width: 100px;
+    background-color: bisque;
+}
+
+h2{
+    color: limegreen;
+}
+

@@ -1,0 +1,44 @@
+mixin outputNumbers(results)
+    table(border="1")
+        thead   
+            tr
+                th Author
+        tbody
+          each stuff in results
+            tr
+                td 
+                    = stuff.number   
+
+mixin generateForm(results)
+    form(method="post" action="/")
+        h3="Grid Size"
+
+        select(name="grid")
+            each stuff in results
+                option(value=stuff.number) 
+                    = stuff.number
+        br
+        br
+        br
+        input(type="submit")     
+
+mixin generateGrid(userResult)
+    table(border="1")       
+        -for (var tr = 1; tr <= userResult; tr++)
+            tr
+                -for($td = 1; $td <= 10; $td++)
+                    -var color = ((1<<24)*Math.random()|0).toString(16)
+                    td(style="background-color:#"+color)
+                        =color
+                        br
+                        span(style="color:#ffffff")
+                            =color
+
+mixin 404 
+    -var randArray = ['still', 'rotate', 'shrink']      
+        -for (var j = 0; j <= Math.floor((Math.random() * 30) + 20); j++) 
+                -var i = Math.floor((Math.random() * 2) + 1)
+                -var varClass = randArray[i]
+                div(class=varClass)
+                    =404
+                

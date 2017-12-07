@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+    form(method="post" action="/results")
+  h2 Welcome to #{title}
+        p Name: #{name}
+        p Email: #{email}
+        p Comments: #{comments}
