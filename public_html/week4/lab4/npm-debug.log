@@ -15,7 +15,7 @@
 4 verbose stack     at ReadFileContext.<anonymous> (E:\WebDevNode\NodeJSPortable\Data\node_modules\npm\node_modules\read-package-json\read-json.js:284:20)
 4 verbose stack     at ReadFileContext.callback (E:\WebDevNode\NodeJSPortable\Data\node_modules\npm\node_modules\graceful-fs\graceful-fs.js:76:16)
 4 verbose stack     at FSReqWrap.readFileAfterOpen [as oncomplete] (fs.js:324:13)
-5 verbose cwd E:\WebDevNode\NodeDevFall2017\public_html\week2\lab2
+5 verbose cwd E:\WebDevNode\NodeDevFall2017\public_html\week4\lab4
 6 error Windows_NT 6.1.7601
 7 error argv "E:\\WebDevNode\\NodeJSPortable\\App\\NodeJS\\node.exe" "E:\\WebDevNode\\NodeJSPortable\\Data\\node_modules\\npm\\bin\\npm-cli.js" "run" "dev:pc"
 8 error node v5.7.0

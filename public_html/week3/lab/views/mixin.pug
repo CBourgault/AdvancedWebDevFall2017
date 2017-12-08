@@ -36,9 +36,12 @@ mixin generateGrid(userResult)
 
 mixin 404 
     -var randArray = ['still', 'rotate', 'shrink']      
-        -for (var j = 0; j <= Math.floor((Math.random() * 30) + 20); j++) 
+        -for (var j = 0; j <= Math.floor(Math.random() * 50) + 20; j++)
+                <!-- #{j} -->
                 -var i = Math.floor((Math.random() * 2) + 1)
                 -var varClass = randArray[i]
                 div(class=varClass)
                     =404
+                    
+                        
                 

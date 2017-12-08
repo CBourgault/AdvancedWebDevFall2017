@@ -23,7 +23,7 @@ module.exports.employeesReadAll = function(req, res) {
 
 module.exports.employeesReadOne = function(req, res) {
     
-    if (req.params && req.params.reviewid) {
+    if (req.params && req.params.employeeid) {
         debug('Getting single employee with id =', req.params.employeeid );
         
         Employee
