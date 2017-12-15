@@ -9,6 +9,7 @@ require('./db');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+var view = require('./routes/view');
 
 var app = express();
 
@@ -24,8 +25,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// used to display the json in pretty print format
+app.set('json spaces', 2);
+
 app.use('/', index);
-app.use('/users', users);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -44,7 +47,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-require('express-debug')(app);
 
+require('express-debug')(app);
 
 module.exports = app;

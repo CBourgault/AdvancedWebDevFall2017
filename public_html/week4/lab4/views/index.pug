@@ -2,4 +2,35 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p
+    a(href="./view") View
+  h2=message
+  form.form-horizontal(action="/", method="post", role="form")
+        .form-group
+          label.control-label(for="firstName") First Name
+          .col
+            input#firstName.form-control(name="firstName")
+        .form-group
+          label.control-label(for="lastName") Last Name
+          .col
+            input#lastName.form-control(name="lastName")
+        .form-group
+          label.control-label(for="department") Department
+          .col
+            select#department.form-control.input-sm(name="department")
+              option Marketing
+              option Customer Support
+              option Development
+        .form-group
+          label.control-label(for="startDate") Start Date
+          .col
+            input#startDate.form-control(name="startDate", type="date")
+        .form-group
+          label.control-label(for="jobTitle") Job Title
+          .col
+            input#jobTitle.form-control(name="jobTitle")
+        .form-group
+          label.control-label(for="salary") Salary
+          .col
+            input#salary.form-control(name="salary")
+        input(type="submit" value="Add Employee") 

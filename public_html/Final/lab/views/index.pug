@@ -1,0 +1,26 @@
+extends layout
+
+block content
+    h1= title
+    p Welcome to #{title}
+    form(method="post" action="/")
+        h3="Name"
+        input(type="text" name="Name")
+        </br>
+        h3="Phone"
+        input(type="text" name="Number")
+        </br>
+        h3="Type"
+        <select name="type">
+            <option value="Mobile">Mobile</option>
+            <option value="Work">Work</option>
+            <option value="Home">Home</option>
+        </select>
+        </br></br>
+        input(type="submit")
+        </br></br></br>
+        a(href="/view") View Contacts</br>
+
+
+
+
